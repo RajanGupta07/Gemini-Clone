@@ -1,12 +1,10 @@
 .sidebar {
   min-height: 100vh;
-  width: 260px;
   display: inline-flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: #f0f4f9;
   padding: 25px 15px;
-  transition: transform 0.3s ease;
 }
 
 .sidebar img {
@@ -45,6 +43,7 @@
 .sidebar .recent-title {
   margin-top: 30px;
   margin-bottom: 20px;
+
 }
 
 .sidebar .recent-entry {
@@ -70,30 +69,11 @@
 .sidebar .bottom-item {
   padding-right: 10px;
   cursor: pointer;
+
 }
 
-/* Mobile */
-@media (max-width: 600px) {
+@media (max-width:600px) {
   .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    transform: translateX(-100%);
-    z-index: 1001;
+    display: none;
   }
-
-  .sidebar.mobile-open {
-    transform: translateX(0);
-  }
-}
-
-/* Overlay */
-.sidebar-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.35);
-  z-index: 1000;
 }

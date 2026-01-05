@@ -5,7 +5,7 @@ import { GoogleGenAI } from "@google/genai";
 
 async function main(prompt) {
   const ai = new GoogleGenAI({
-    apiKey: "AIzaSyAocYgWA_Wmm5Y9z0EA54GXvZ2-1Ofjqss",
+    apiKey: import.meta.env.VITE_GEMINI_API_KEY,
   });
 
   const response = await ai.models.generateContentStream({
